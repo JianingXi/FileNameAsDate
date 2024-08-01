@@ -2,6 +2,8 @@ import os
 import shutil
 from datetime import datetime
 
+MAX_PATH_LENGTH = 260  # Maximum path length for Windows
+MAX_FILENAME_LENGTH = 100  # Maximum length for filenames to avoid path length issues
 
 def create_temp_dir(directory):
     """
@@ -49,6 +51,27 @@ def prepend_date_to_filename(filename, date):
     return filename
 
 
+def shorten_filename(filename, max_length=MAX_FILENAME_LENGTH):
+    """
+    将文件名缩短到指定长度。
+    """
+    if len(filename) > max_length:
+        base, ext = os.path.splitext(filename)
+        filename = base[:max_length - len(ext)] + ext
+    return filename
+
+
+def ensure_path_length(path, max_length=MAX_PATH_LENGTH):
+    """
+    确保路径长度不超过指定的最大长度。
+    """
+    if len(path) > max_length:
+        directory, filename = os.path.split(path)
+        filename = shorten_filename(filename, max_length - len(directory) - 1)
+        path = os.path.join(directory, filename)
+    return path
+
+
 def move_files_with_new_names(src_dir, dst_dir):
     """
     将文件从 src_dir 移动到 dst_dir，并更新文件名。
@@ -62,8 +85,10 @@ def move_files_with_new_names(src_dir, dst_dir):
         file_mod_time = datetime.fromtimestamp(os.path.getmtime(src_path))
         new_filename = sanitize_filename(filename)
         new_filename = prepend_date_to_filename(new_filename, file_mod_time)
+        new_filename = shorten_filename(new_filename)
 
         dst_path = os.path.join(dst_dir, new_filename)
+        dst_path = ensure_path_length(dst_path)
 
         if src_path != dst_path:
             print(f"rename {new_filename}")
@@ -83,16 +108,17 @@ def move_directories_with_new_names(src_dir, dst_dir):
         dir_mod_time = datetime.fromtimestamp(os.path.getmtime(src_path))
         new_dirname = sanitize_filename(dirname)
         new_dirname = prepend_date_to_filename(new_dirname, dir_mod_time)
+        new_dirname = shorten_filename(new_dirname)
 
         dst_path = os.path.join(dst_dir, new_dirname)
+        dst_path = ensure_path_length(dst_path)
 
         if src_path != dst_path:
             print(f"rename directory {new_dirname}")
             shutil.move(src_path, dst_path)
 
 
-def main():
-    basedir = r'C:\Users\DELL\Desktop\ToDo'
+def rename_date(basedir):
     if not basedir.endswith('/'):
         basedir += '/'
 
@@ -109,5 +135,7 @@ def main():
     os.rmdir(temp_dir)
 
 
-if __name__ == "__main__":
-    main()
+
+basedir = r'C:\Users\xijia\Desktop\ToDo'
+rename_date(basedir)
+
