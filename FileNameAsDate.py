@@ -21,7 +21,7 @@ def sanitize_filename(filename):
     """
     replacements = {
         ' ': '_', '-': '_', '—': '_', '。': '_', '：': '_', ':': '_',
-        '（': '_', '）': '_', '(': '_', ')': '_'
+        '（': '_', '）': '_', '(': '_', ')': '_', ',': '_', ';': '_'
     }
     for old, new in replacements.items():
         filename = filename.replace(old, new)
@@ -137,5 +137,6 @@ def rename_date(basedir):
 
 
 basedir = r'C:\Users\xijia\Desktop\ToDo'
+# basedir = r'C:\MyDocument\教材撰写\BK'
 rename_date(basedir)
 
