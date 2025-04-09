@@ -135,8 +135,65 @@ def rename_date(basedir):
     os.rmdir(temp_dir)
 
 
-
-basedir = r'C:\Users\xijia\Desktop\ToDo'
-# basedir = r'C:\MyDocument\教材撰写\BK'
+basedir = r'C:\Users\xijia\Desktop\ToDoList\D20_Done'
 rename_date(basedir)
+basedir = r'C:\Users\xijia\Desktop\ToDoList\D20_ToEvernote'
+rename_date(basedir)
+basedir = r'C:\Users\xijia\Desktop\ToDoList\D20_ToHardDisk'
+rename_date(basedir)
+basedir = r'C:\Users\xijia\Desktop\ToDoList\D20_ToDailyNotice'
+rename_date(basedir)
+
+
+
+# Paper
+basedir = r'C:\Users\xijia\Desktop\DoingPlatform\D20_论文\D20241115_冯景辉论文'
+rename_date(basedir)
+basedir = r'C:\Users\xijia\Desktop\DoingPlatform\D20_论文\D20241214_黄思敏论文'
+rename_date(basedir)
+basedir = r'C:\Users\xijia\Desktop\DoingPlatform\D20_论文\D20241219_余宇论文'
+rename_date(basedir)
+basedir = r'C:\Users\xijia\Desktop\DoingPlatform\D20_论文\D20250114_孔元元'
+rename_date(basedir)
+
+
+basedir = r'C:\Users\xijia\Desktop\DoingPlatform\D20_比赛\23级孙波_BME全国赛'
+rename_date(basedir)
+basedir = r'C:\Users\xijia\Desktop\DoingPlatform\D20_比赛\23级王玉儿_BME全国赛'
+rename_date(basedir)
+basedir = r'C:\Users\xijia\Desktop\DoingPlatform\D20_比赛\23级黄颂_BME全国赛'
+rename_date(basedir)
+basedir = r'C:\Users\xijia\Desktop\DoingPlatform\D20_比赛\24级李旭翔_BME全国赛'
+rename_date(basedir)
+
+basedir = r'C:\Users\xijia\Desktop\DoingPlatform\教创赛省赛提交\E01_报告素材R1'
+rename_date(basedir)
+
+
+basedir = r'C:\Users\xijia\Desktop\DoingPlatform\D20_毕设\林煌'
+rename_date(basedir)
+basedir = r'C:\Users\xijia\Desktop\DoingPlatform\D20_毕设\张姚琪'
+rename_date(basedir)
+
+
+# 专业评估材料
+basedir = r'C:\Users\xijia\Desktop\ToDoList\D20250212_专业评估材料'
+rename_date(basedir)
+
+basedir = r'C:\Users\xijia\Desktop\DoingPlatform\教创赛省赛提交\A01_学校通知'
+rename_date(basedir)
+basedir = r'C:\Users\xijia\Desktop\DoingPlatform\教创赛省赛提交\E02_申报表'
+rename_date(basedir)
+
+
+basedir = r'C:\MyDocument\教材撰写\E03_原稿二审修改\BK'
+rename_date(basedir)
+
+
+
+
+
+print('--------------all done----------------')
+print('   ')
+print('--------------all done----------------')
 
