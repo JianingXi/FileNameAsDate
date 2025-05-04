@@ -137,7 +137,7 @@ def rename_date(basedir):
 
 basedir = r'C:\Users\xijia\Desktop\ToDoList\D20_Done'
 rename_date(basedir)
-basedir = r'C:\Users\xijia\Desktop\ToDoList\D20_ToEvernote'
+basedir = r'C:\Users\xijia\Desktop\ToDoList\D20_Z_ToEvernote'
 rename_date(basedir)
 basedir = r'C:\Users\xijia\Desktop\ToDoList\D20_ToHardDisk'
 rename_date(basedir)
@@ -167,10 +167,15 @@ basedir = r'C:\Users\xijia\Desktop\DoingPlatform\D20_比赛\24级李旭翔_BME�
 rename_date(basedir)
 
 
-
+basedir = r'C:\Users\xijia\Desktop\DoingPlatform\D20_毕设\敖济民'
+rename_date(basedir)
+basedir = r'C:\Users\xijia\Desktop\DoingPlatform\D20_毕设\严颖轩'
+rename_date(basedir)
 basedir = r'C:\Users\xijia\Desktop\DoingPlatform\D20_毕设\林煌'
 rename_date(basedir)
 basedir = r'C:\Users\xijia\Desktop\DoingPlatform\D20_毕设\张姚琪'
+rename_date(basedir)
+basedir = r'C:\Users\xijia\Desktop\DoingPlatform\D20_毕设\李丹'
 rename_date(basedir)
 
 
@@ -178,9 +183,10 @@ rename_date(basedir)
 basedir = r'C:\Users\xijia\Desktop\ToDoList\D20250212_专业评估材料'
 rename_date(basedir)
 
-
-
-
+basedir = r'C:\Users\xijia\Desktop\DoingPlatform\D20250428_教创赛省赛决赛答辩\A01通知'
+rename_date(basedir)
+basedir = r'C:\Users\xijia\Desktop\DoingPlatform\D20250428_教创赛省赛决赛答辩\A02决赛打磨'
+rename_date(basedir)
 
 print('--------------all done----------------')
 print('   ')
