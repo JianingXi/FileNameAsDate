@@ -97,12 +97,8 @@ def move_shortcuts_into_dirs(shortcut_source, target_folder):
                 print(f"未找到匹配的二级目录，快捷方式 {file} 未移动。")
 
 
-
-
-
-if __name__ == "__main__":
-
-    disk_char = "D:"
+def update_shortcut_folders(disk_char: str):
+    # disk_char = "D:"
 
     # 清除失效的旧有快捷方式
     folder_path = r"D:\Alpha"

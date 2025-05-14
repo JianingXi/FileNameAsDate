@@ -166,6 +166,9 @@ rename_date(basedir)
 basedir = r'C:\Users\xijia\Desktop\DoingPlatform\D20_比赛\24级李旭翔_BME全国赛'
 rename_date(basedir)
 
+basedir = r'C:\Users\xijia\Desktop\DoingPlatform\D20_比赛\24硕黄思敏_中国国际'
+rename_date(basedir)
+
 
 basedir = r'C:\Users\xijia\Desktop\DoingPlatform\D20_毕设\敖济民'
 rename_date(basedir)
@@ -185,8 +188,13 @@ rename_date(basedir)
 
 basedir = r'C:\Users\xijia\Desktop\DoingPlatform\D20250428_教创赛省赛决赛答辩\A01通知'
 rename_date(basedir)
-basedir = r'C:\Users\xijia\Desktop\DoingPlatform\D20250428_教创赛省赛决赛答辩\A02决赛打磨'
+basedir = r'C:\Users\xijia\Desktop\DoingPlatform\D20250428_教创赛省赛决赛答辩\A03决赛打磨'
 rename_date(basedir)
+
+"""
+basedir = r'D:\Alpha\J机智\工作业务\Y2025'
+rename_date(basedir)
+"""
 
 print('--------------all done----------------')
 print('   ')
